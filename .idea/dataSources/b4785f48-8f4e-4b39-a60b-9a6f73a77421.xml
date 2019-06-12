@@ -1,0 +1,562 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="guns@localhost">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.0">
+    <root id="1"/>
+    <schema id="2" parent="1" name="guns">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="3" parent="1" name="gun"/>
+    <schema id="4" parent="1" name="guns_test"/>
+    <schema id="5" parent="1" name="information_schema"/>
+    <table id="6" parent="2" name="sys_dept">
+      <Comment>部门表</Comment>
+    </table>
+    <table id="7" parent="2" name="sys_dict">
+      <Comment>字典表</Comment>
+    </table>
+    <table id="8" parent="2" name="sys_file_info">
+      <Comment>文件信息表&#xd;
+</Comment>
+    </table>
+    <table id="9" parent="2" name="sys_login_log">
+      <Comment>登录记录</Comment>
+    </table>
+    <table id="10" parent="2" name="sys_menu">
+      <Comment>菜单表</Comment>
+    </table>
+    <table id="11" parent="2" name="sys_notice">
+      <Comment>通知表</Comment>
+    </table>
+    <table id="12" parent="2" name="sys_operation_log">
+      <Comment>操作日志</Comment>
+    </table>
+    <table id="13" parent="2" name="sys_relation">
+      <Comment>角色和菜单关联表</Comment>
+    </table>
+    <table id="14" parent="2" name="sys_role">
+      <Comment>角色表</Comment>
+    </table>
+    <table id="15" parent="2" name="sys_user">
+      <Comment>管理员表</Comment>
+    </table>
+    <column id="16" parent="6" name="DEPT_ID">
+      <Position>1</Position>
+      <Comment>主键id</Comment>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="17" parent="6" name="PID">
+      <Position>2</Position>
+      <Comment>父部门id</Comment>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <column id="18" parent="6" name="PIDS">
+      <Position>3</Position>
+      <Comment>父级ids</Comment>
+      <DataType>varchar(512)|0</DataType>
+    </column>
+    <column id="19" parent="6" name="SIMPLE_NAME">
+      <Position>4</Position>
+      <Comment>简称</Comment>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="20" parent="6" name="FULL_NAME">
+      <Position>5</Position>
+      <Comment>全称</Comment>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="21" parent="6" name="DESCRIPTION">
+      <Position>6</Position>
+      <Comment>描述</Comment>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="22" parent="6" name="VERSION">
+      <Position>7</Position>
+      <Comment>版本（乐观锁保留字段）</Comment>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="23" parent="6" name="SORT">
+      <Position>8</Position>
+      <Comment>排序</Comment>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="24" parent="6" name="CREATE_TIME">
+      <Position>9</Position>
+      <Comment>创建时间</Comment>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="25" parent="6" name="UPDATE_TIME">
+      <Position>10</Position>
+      <Comment>修改时间</Comment>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="26" parent="6" name="CREATE_USER">
+      <Position>11</Position>
+      <Comment>创建人</Comment>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <column id="27" parent="6" name="UPDATE_USER">
+      <Position>12</Position>
+      <Comment>修改人</Comment>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <column id="28" parent="7" name="DICT_ID">
+      <Position>1</Position>
+      <Comment>主键id</Comment>
+      <DataType>bigint(20) unsigned|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="29" parent="7" name="PID">
+      <Position>2</Position>
+      <Comment>父级字典id</Comment>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <column id="30" parent="7" name="NAME">
+      <Position>3</Position>
+      <Comment>字典名称</Comment>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="31" parent="7" name="CODE">
+      <Position>4</Position>
+      <Comment>字典的编码</Comment>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="32" parent="7" name="DESCRIPTION">
+      <Position>5</Position>
+      <Comment>字典描述</Comment>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="33" parent="7" name="SORT">
+      <Position>6</Position>
+      <Comment>排序</Comment>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="34" parent="7" name="CREATE_TIME">
+      <Position>7</Position>
+      <Comment>创建时间</Comment>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="35" parent="7" name="UPDATE_TIME">
+      <Position>8</Position>
+      <Comment>修改时间</Comment>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="36" parent="7" name="CREATE_USER">
+      <Position>9</Position>
+      <Comment>创建人</Comment>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <column id="37" parent="7" name="UPDATE_USER">
+      <Position>10</Position>
+      <Comment>修改人</Comment>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <column id="38" parent="8" name="FILE_ID">
+      <Position>1</Position>
+      <Comment>主键id</Comment>
+      <DataType>varchar(50)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="39" parent="8" name="FILE_DATA">
+      <Position>2</Position>
+      <Comment>base64编码的文件</Comment>
+      <DataType>text|0</DataType>
+    </column>
+    <column id="40" parent="8" name="CREATE_TIME">
+      <Position>3</Position>
+      <Comment>创建时间</Comment>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="41" parent="8" name="UPDATE_TIME">
+      <Position>4</Position>
+      <Comment>修改时间</Comment>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="42" parent="8" name="CREATE_USER">
+      <Position>5</Position>
+      <Comment>创建用户</Comment>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <column id="43" parent="8" name="UPDATE_USER">
+      <Position>6</Position>
+      <Comment>修改用户</Comment>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <column id="44" parent="9" name="LOGIN_LOG_ID">
+      <Position>1</Position>
+      <Comment>主键</Comment>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="45" parent="9" name="LOG_NAME">
+      <Position>2</Position>
+      <Comment>日志名称</Comment>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="46" parent="9" name="USER_ID">
+      <Position>3</Position>
+      <Comment>管理员id</Comment>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <column id="47" parent="9" name="CREATE_TIME">
+      <Position>4</Position>
+      <Comment>创建时间</Comment>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="48" parent="9" name="SUCCEED">
+      <Position>5</Position>
+      <Comment>是否执行成功</Comment>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="49" parent="9" name="MESSAGE">
+      <Position>6</Position>
+      <Comment>具体消息</Comment>
+      <DataType>text|0</DataType>
+    </column>
+    <column id="50" parent="9" name="IP_ADDRESS">
+      <Position>7</Position>
+      <Comment>登录ip</Comment>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="51" parent="10" name="MENU_ID">
+      <Position>1</Position>
+      <Comment>主键id</Comment>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="52" parent="10" name="CODE">
+      <Position>2</Position>
+      <Comment>菜单编号</Comment>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="53" parent="10" name="PCODE">
+      <Position>3</Position>
+      <Comment>菜单父编号</Comment>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="54" parent="10" name="PCODES">
+      <Position>4</Position>
+      <Comment>当前菜单的所有父菜单编号</Comment>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="55" parent="10" name="NAME">
+      <Position>5</Position>
+      <Comment>菜单名称</Comment>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="56" parent="10" name="ICON">
+      <Position>6</Position>
+      <Comment>菜单图标</Comment>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="57" parent="10" name="URL">
+      <Position>7</Position>
+      <Comment>url地址</Comment>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="58" parent="10" name="SORT">
+      <Position>8</Position>
+      <Comment>菜单排序号</Comment>
+      <DataType>int(65)|0</DataType>
+    </column>
+    <column id="59" parent="10" name="LEVELS">
+      <Position>9</Position>
+      <Comment>菜单层级</Comment>
+      <DataType>int(65)|0</DataType>
+    </column>
+    <column id="60" parent="10" name="MENU_FLAG">
+      <Position>10</Position>
+      <Comment>是否是菜单(字典)</Comment>
+      <DataType>varchar(32)|0</DataType>
+    </column>
+    <column id="61" parent="10" name="DESCRIPTION">
+      <Position>11</Position>
+      <Comment>备注</Comment>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="62" parent="10" name="STATUS">
+      <Position>12</Position>
+      <Comment>菜单状态(字典)</Comment>
+      <DataType>varchar(32)|0</DataType>
+      <DefaultExpression>&apos;ENABLE&apos;</DefaultExpression>
+    </column>
+    <column id="63" parent="10" name="NEW_PAGE_FLAG">
+      <Position>13</Position>
+      <Comment>是否打开新页面的标识(字典)</Comment>
+      <DataType>varchar(32)|0</DataType>
+    </column>
+    <column id="64" parent="10" name="OPEN_FLAG">
+      <Position>14</Position>
+      <Comment>是否打开(字典)</Comment>
+      <DataType>varchar(32)|0</DataType>
+    </column>
+    <column id="65" parent="10" name="CREATE_TIME">
+      <Position>15</Position>
+      <Comment>创建时间</Comment>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="66" parent="10" name="UPDATE_TIME">
+      <Position>16</Position>
+      <Comment>修改时间</Comment>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="67" parent="10" name="CREATE_USER">
+      <Position>17</Position>
+      <Comment>创建人</Comment>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <column id="68" parent="10" name="UPDATE_USER">
+      <Position>18</Position>
+      <Comment>修改人</Comment>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <column id="69" parent="11" name="NOTICE_ID">
+      <Position>1</Position>
+      <Comment>主键</Comment>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="70" parent="11" name="TITLE">
+      <Position>2</Position>
+      <Comment>标题</Comment>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="71" parent="11" name="CONTENT">
+      <Position>3</Position>
+      <Comment>内容</Comment>
+      <DataType>text|0</DataType>
+    </column>
+    <column id="72" parent="11" name="CREATE_TIME">
+      <Position>4</Position>
+      <Comment>创建时间</Comment>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="73" parent="11" name="CREATE_USER">
+      <Position>5</Position>
+      <Comment>创建人</Comment>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <column id="74" parent="11" name="UPDATE_TIME">
+      <Position>6</Position>
+      <Comment>修改时间</Comment>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="75" parent="11" name="UPDATE_USER">
+      <Position>7</Position>
+      <Comment>修改人</Comment>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <column id="76" parent="12" name="OPERATION_LOG_ID">
+      <Position>1</Position>
+      <Comment>主键</Comment>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="77" parent="12" name="LOG_TYPE">
+      <Position>2</Position>
+      <Comment>日志类型(字典)</Comment>
+      <DataType>varchar(32)|0</DataType>
+    </column>
+    <column id="78" parent="12" name="LOG_NAME">
+      <Position>3</Position>
+      <Comment>日志名称</Comment>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="79" parent="12" name="USER_ID">
+      <Position>4</Position>
+      <Comment>用户id</Comment>
+      <DataType>bigint(65)|0</DataType>
+    </column>
+    <column id="80" parent="12" name="CLASS_NAME">
+      <Position>5</Position>
+      <Comment>类名称</Comment>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="81" parent="12" name="METHOD">
+      <Position>6</Position>
+      <Comment>方法名称</Comment>
+      <DataType>text|0</DataType>
+    </column>
+    <column id="82" parent="12" name="CREATE_TIME">
+      <Position>7</Position>
+      <Comment>创建时间</Comment>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="83" parent="12" name="SUCCEED">
+      <Position>8</Position>
+      <Comment>是否成功(字典)</Comment>
+      <DataType>varchar(32)|0</DataType>
+    </column>
+    <column id="84" parent="12" name="MESSAGE">
+      <Position>9</Position>
+      <Comment>备注</Comment>
+      <DataType>text|0</DataType>
+    </column>
+    <column id="85" parent="13" name="RELATION_ID">
+      <Position>1</Position>
+      <Comment>主键</Comment>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="86" parent="13" name="MENU_ID">
+      <Position>2</Position>
+      <Comment>菜单id</Comment>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <column id="87" parent="13" name="ROLE_ID">
+      <Position>3</Position>
+      <Comment>角色id</Comment>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <column id="88" parent="14" name="ROLE_ID">
+      <Position>1</Position>
+      <Comment>主键id</Comment>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="89" parent="14" name="PID">
+      <Position>2</Position>
+      <Comment>父角色id</Comment>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <column id="90" parent="14" name="NAME">
+      <Position>3</Position>
+      <Comment>角色名称</Comment>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="91" parent="14" name="DESCRIPTION">
+      <Position>4</Position>
+      <Comment>提示</Comment>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="92" parent="14" name="SORT">
+      <Position>5</Position>
+      <Comment>序号</Comment>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="93" parent="14" name="VERSION">
+      <Position>6</Position>
+      <Comment>乐观锁</Comment>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="94" parent="14" name="CREATE_TIME">
+      <Position>7</Position>
+      <Comment>创建时间</Comment>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="95" parent="14" name="UPDATE_TIME">
+      <Position>8</Position>
+      <Comment>修改时间</Comment>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="96" parent="14" name="CREATE_USER">
+      <Position>9</Position>
+      <Comment>创建用户</Comment>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <column id="97" parent="14" name="UPDATE_USER">
+      <Position>10</Position>
+      <Comment>修改用户</Comment>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <column id="98" parent="15" name="USER_ID">
+      <Position>1</Position>
+      <Comment>主键id</Comment>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="99" parent="15" name="AVATAR">
+      <Position>2</Position>
+      <Comment>头像</Comment>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="100" parent="15" name="ACCOUNT">
+      <Position>3</Position>
+      <Comment>账号</Comment>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="101" parent="15" name="PASSWORD">
+      <Position>4</Position>
+      <Comment>密码</Comment>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="102" parent="15" name="SALT">
+      <Position>5</Position>
+      <Comment>md5密码盐</Comment>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="103" parent="15" name="NAME">
+      <Position>6</Position>
+      <Comment>名字</Comment>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="104" parent="15" name="BIRTHDAY">
+      <Position>7</Position>
+      <Comment>生日</Comment>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="105" parent="15" name="SEX">
+      <Position>8</Position>
+      <Comment>性别(字典)</Comment>
+      <DataType>varchar(32)|0</DataType>
+    </column>
+    <column id="106" parent="15" name="EMAIL">
+      <Position>9</Position>
+      <Comment>电子邮件</Comment>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="107" parent="15" name="PHONE">
+      <Position>10</Position>
+      <Comment>电话</Comment>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="108" parent="15" name="ROLE_ID">
+      <Position>11</Position>
+      <Comment>角色id(多个逗号隔开)</Comment>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="109" parent="15" name="DEPT_ID">
+      <Position>12</Position>
+      <Comment>部门id(多个逗号隔开)</Comment>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <column id="110" parent="15" name="STATUS">
+      <Position>13</Position>
+      <Comment>状态(字典)</Comment>
+      <DataType>varchar(32)|0</DataType>
+    </column>
+    <column id="111" parent="15" name="CREATE_TIME">
+      <Position>14</Position>
+      <Comment>创建时间</Comment>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="112" parent="15" name="CREATE_USER">
+      <Position>15</Position>
+      <Comment>创建人</Comment>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <column id="113" parent="15" name="UPDATE_TIME">
+      <Position>16</Position>
+      <Comment>更新时间</Comment>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="114" parent="15" name="UPDATE_USER">
+      <Position>17</Position>
+      <Comment>更新人</Comment>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <column id="115" parent="15" name="VERSION">
+      <Position>18</Position>
+      <Comment>乐观锁</Comment>
+      <DataType>int(11)|0</DataType>
+    </column>
+  </database-model>
+</dataSource>
